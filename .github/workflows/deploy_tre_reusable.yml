@@ -586,14 +586,14 @@ jobs:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
           AZURE_ENVIRONMENT: ${{ vars.AZURE_ENVIRONMENT }}
           ACR_NAME: ${{ secrets.ACR_NAME }}
-          API_CLIENT_ID: "${{ secrets.API_CLIENT_ID }}"
-          AAD_TENANT_ID: "${{ secrets.AAD_TENANT_ID }}"
+          API_CLIENT_ID: ${{ secrets.API_CLIENT_ID }}
+          AAD_TENANT_ID: ${{ secrets.AAD_TENANT_ID }}
           TRE_ID: ${{ secrets.TRE_ID }}
           LOCATION: ${{ vars.LOCATION }}
           BUNDLE_TYPE: ${{ matrix.BUNDLE_TYPE }}
-          TEST_APP_ID: "${{ secrets.TEST_APP_ID }}"
-          TEST_ACCOUNT_CLIENT_ID: "${{ secrets.TEST_ACCOUNT_CLIENT_ID }}"
-          TEST_ACCOUNT_CLIENT_SECRET: "${{ secrets.TEST_ACCOUNT_CLIENT_SECRET }}"
+          TEST_APP_ID: ${{ secrets.TEST_APP_ID }}
+          TEST_ACCOUNT_CLIENT_ID: ${{ secrets.TEST_ACCOUNT_CLIENT_ID }}
+          TEST_ACCOUNT_CLIENT_SECRET: ${{ secrets.TEST_ACCOUNT_CLIENT_SECRET }}
 
   register_user_resource_bundles:
     name: Register User Resource Bundles
@@ -641,15 +641,15 @@ jobs:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
           AZURE_ENVIRONMENT: ${{ vars.AZURE_ENVIRONMENT }}
           ACR_NAME: ${{ secrets.ACR_NAME }}
-          API_CLIENT_ID: "${{ secrets.API_CLIENT_ID }}"
-          AAD_TENANT_ID: "${{ secrets.AAD_TENANT_ID }}"
+          API_CLIENT_ID: ${{ secrets.API_CLIENT_ID }}
+          AAD_TENANT_ID: ${{ secrets.AAD_TENANT_ID }}
           TRE_ID: ${{ secrets.TRE_ID }}
           LOCATION: ${{ vars.LOCATION }}
           BUNDLE_TYPE: ${{ matrix.BUNDLE_TYPE }}
           WORKSPACE_SERVICE_NAME: ${{ matrix.WORKSPACE_SERVICE_NAME }}
-          TEST_APP_ID: "${{ secrets.TEST_APP_ID }}"
-          TEST_ACCOUNT_CLIENT_ID: "${{ secrets.TEST_ACCOUNT_CLIENT_ID }}"
-          TEST_ACCOUNT_CLIENT_SECRET: "${{ secrets.TEST_ACCOUNT_CLIENT_SECRET }}"
+          TEST_APP_ID: ${{ secrets.TEST_APP_ID }}
+          TEST_ACCOUNT_CLIENT_ID: ${{ secrets.TEST_ACCOUNT_CLIENT_ID }}
+          TEST_ACCOUNT_CLIENT_SECRET: ${{ secrets.TEST_ACCOUNT_CLIENT_SECRET }}
 
   deploy_shared_services:
     name: Deploy shared services
@@ -673,14 +673,14 @@ jobs:
           CI_CACHE_ACR_NAME: ${{ secrets.CI_CACHE_ACR_NAME}}
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
           AZURE_ENVIRONMENT: ${{ vars.AZURE_ENVIRONMENT }}
-          API_CLIENT_ID: "${{ secrets.API_CLIENT_ID }}"
-          AAD_TENANT_ID: "${{ secrets.AAD_TENANT_ID }}"
+          API_CLIENT_ID: ${{ secrets.API_CLIENT_ID }}
+          AAD_TENANT_ID: ${{ secrets.AAD_TENANT_ID }}
           TRE_ID: ${{ secrets.TRE_ID }}
           LOCATION: ${{ vars.LOCATION }}
           FIREWALL_SKU: ${{ vars.FIREWALL_SKU}}
-          TEST_APP_ID: "${{ secrets.TEST_APP_ID }}"
-          TEST_ACCOUNT_CLIENT_ID: "${{ secrets.TEST_ACCOUNT_CLIENT_ID }}"
-          TEST_ACCOUNT_CLIENT_SECRET: "${{ secrets.TEST_ACCOUNT_CLIENT_SECRET }}"
+          TEST_APP_ID: ${{ secrets.TEST_APP_ID }}
+          TEST_ACCOUNT_CLIENT_ID: ${{ secrets.TEST_ACCOUNT_CLIENT_ID }}
+          TEST_ACCOUNT_CLIENT_SECRET: ${{ secrets.TEST_ACCOUNT_CLIENT_SECRET }}
 
       - name: State Store Migrations
         uses: ./.github/actions/devcontainer_run_command
@@ -690,16 +690,16 @@ jobs:
           CI_CACHE_ACR_NAME: ${{ secrets.CI_CACHE_ACR_NAME}}
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
           AZURE_ENVIRONMENT: ${{ vars.AZURE_ENVIRONMENT }}
-          API_CLIENT_ID: "${{ secrets.API_CLIENT_ID }}"
-          AAD_TENANT_ID: "${{ secrets.AAD_TENANT_ID }}"
+          API_CLIENT_ID: ${{ secrets.API_CLIENT_ID }}
+          AAD_TENANT_ID: ${{ secrets.AAD_TENANT_ID }}
           TRE_ID: ${{ secrets.TRE_ID }}
           LOCATION: ${{ vars.LOCATION }}
           TERRAFORM_STATE_CONTAINER_NAME: ${{ vars.TERRAFORM_STATE_CONTAINER_NAME }}
           MGMT_RESOURCE_GROUP_NAME: ${{ secrets.MGMT_RESOURCE_GROUP_NAME }}
           MGMT_STORAGE_ACCOUNT_NAME: ${{ secrets.MGMT_STORAGE_ACCOUNT_NAME }}
-          TEST_APP_ID: "${{ secrets.TEST_APP_ID }}"
-          TEST_ACCOUNT_CLIENT_ID: "${{ secrets.TEST_ACCOUNT_CLIENT_ID }}"
-          TEST_ACCOUNT_CLIENT_SECRET: "${{ secrets.TEST_ACCOUNT_CLIENT_SECRET }}"
+          TEST_APP_ID: ${{ secrets.TEST_APP_ID }}
+          TEST_ACCOUNT_CLIENT_ID: ${{ secrets.TEST_ACCOUNT_CLIENT_ID }}
+          TEST_ACCOUNT_CLIENT_SECRET: ${{ secrets.TEST_ACCOUNT_CLIENT_SECRET }}
 
   deploy_ui:
     name: Deploy UI
