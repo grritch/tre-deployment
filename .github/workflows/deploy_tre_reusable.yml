@@ -78,7 +78,7 @@ on:  # yamllint disable-line rule:truthy
       EXTERNAL_KEY_STORE_ID:
         description: ""
         required: false
-            TEST_APP_ID:
+      TEST_APP_ID:
         description: ""
         required: true
       TEST_WORKSPACE_APP_ID:
