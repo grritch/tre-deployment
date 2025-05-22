@@ -588,6 +588,9 @@ jobs:
           TRE_ID: ${{ secrets.TRE_ID }}
           LOCATION: ${{ vars.LOCATION }}
           BUNDLE_TYPE: ${{ matrix.BUNDLE_TYPE }}
+          TEST_APP_ID: "${{ secrets.TEST_APP_ID }}"
+          TEST_ACCOUNT_CLIENT_ID: "${{ secrets.TEST_ACCOUNT_CLIENT_ID }}"
+          TEST_ACCOUNT_CLIENT_SECRET: "${{ secrets.TEST_ACCOUNT_CLIENT_SECRET }}"
 
   register_user_resource_bundles:
     name: Register User Resource Bundles
